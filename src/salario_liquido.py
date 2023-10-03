@@ -37,7 +37,7 @@ class Funcionario:
             d = 0
             isento = self.desconto_inss + self.dependentes*189.59 + self.outros_descontos
             
-            if(isento >= 528 and self.simplificado == 'N' or self.simplificado == 'n'):
+            if(self.simplificado == 'N' or self.simplificado == 'n'):
                 scd = self.salario - isento
                 if(isento < 528):
                     print("Tá perdendo dinheiro! porque R$ %.2f"%(isento), "< 528")
